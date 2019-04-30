@@ -5,6 +5,9 @@ DIR=$(dirname "$0")
 # install php
 $DIR/php/7.1/install.sh
 
+# install composer
+$DIR/composer/install.sh
+
 # install mysql
 $DIR/mysql/5.7/install.sh
 
