@@ -22,5 +22,5 @@ sudo mysql
 To access the local postgres instance simply run the mysql command as the super user: 
 
 ```
-sudo mysql
+psql
 ```
