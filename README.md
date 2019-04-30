@@ -11,7 +11,7 @@ homestead [CMD]
 
 ## MySQL
 
-To access the local mysql instance simply run the mysql command as the super user: 
+To access the local mysql instance simply run the mysql command: 
 
 ```
 sudo mysql
@@ -19,7 +19,7 @@ sudo mysql
 
 ## Postgres
 
-To access the local postgres instance simply run the mysql command as the super user: 
+To access the local postgres instance simply run the mysql command:
 
 ```
 psql
