@@ -12,7 +12,7 @@ case "$1" in
         sudo service nginx start
         sleep 1
         echo "Starting PHP7.1 ..."
-        sudo service php7.1-fpm start
+        sudo service php7.3-fpm start
         sleep 1
         echo "Starting MySQL ..."
         sudo service mysql start
@@ -29,7 +29,7 @@ case "$1" in
         sudo service nginx stop
         sleep 1
         echo "Stopping PHP7.1 ..."
-        sudo service php7.1-fpm stop
+        sudo service php7.3-fpm stop
         sleep 1
         echo "Stopping MySQL ..."
         sudo service mysql stop
@@ -46,7 +46,7 @@ case "$1" in
         sudo service nginx restart
         sleep 1
         echo "Restarting PHP7.1 ..."
-        sudo service php7.1-fpm restart
+        sudo service php7.3-fpm restart
         sleep 1
         echo "Restarting MySQL ..."
         sudo service mysql restart
@@ -60,7 +60,7 @@ case "$1" in
     ;;
     status)
         sudo service nginx status
-        sudo service php7.1-fpm status
+        sudo service php7.3-fpm status
         sudo service mysql status
         sudo service postgresql status
         sudo service redis-server status

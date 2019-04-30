@@ -9,6 +9,7 @@ if [ ! -d /home/ubuntu/environment/www ]; then
     echo "<?php phpinfo();" >> /home/ubuntu/environment/www/index.php
 fi;
 
+# setup nginx config
 sudo rm /etc/nginx/sites-enabled/default
 sudo cp $DIR/nginx.config /home/ubuntu/environment/nginx.config
 sudo rm /etc/nginx/sites-enabled/aws-cloud9-laravel
