@@ -1,0 +1,72 @@
+#!/bin/bash
+
+if ! [ $# -eq 1 ]
+then
+    echo "Usage: `basename $0` [start|restart|stop|status]"
+    exit 1
+fi
+
+case "$1" in
+    start)
+        echo "Starting Nginx ..."
+        sudo service nginx start
+        sleep 1
+        echo "Starting PHP7.1 ..."
+        sudo service php7.1-fpm start
+        sleep 1
+        echo "Starting MySQL ..."
+        sudo service mysql start
+        sleep 1
+        echo "Starting Postgres ..."
+        sudo service postgresql start
+        sleep 1
+        echo "Starting Redis ..."
+        sudo service redis-server start
+        sleep 1
+    ;;
+    stop)
+        echo "Stopping Nginx ..."
+        sudo service nginx stop
+        sleep 1
+        echo "Stopping PHP7.1 ..."
+        sudo service php7.1-fpm stop
+        sleep 1
+        echo "Stopping MySQL ..."
+        sudo service mysql stop
+        sleep 1
+        echo "Stopping Postgres ..."
+        sudo service postgresql stop
+        sleep 1
+        echo "Stopping Redis ..."
+        sudo service redis-server stop
+        sleep 1
+    ;;
+    restart)
+        echo "Restarting Nginx ..."
+        sudo service nginx restart
+        sleep 1
+        echo "Restarting PHP7.1 ..."
+        sudo service php7.1-fpm restart
+        sleep 1
+        echo "Restarting MySQL ..."
+        sudo service mysql restart
+        sleep 1
+        echo "Restarting Postgres ..."
+        sudo service postgresql restart
+        sleep 1
+        echo "Restarting Redis ..."
+        sudo service redis-server restart
+        sleep 1
+    ;;
+    status)
+        sudo service nginx status
+        sudo service php7.1-fpm status
+        sudo service mysql status
+        sudo service postgresql status
+        sudo service redis-server status
+        exit 0
+    ;;
+    *)
+        echo "Usage: `basename $0` [start|restart|stop|status|install]"
+    ;;
+esac
