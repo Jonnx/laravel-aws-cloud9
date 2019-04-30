@@ -19,3 +19,14 @@ else
     echo "PATH=\"\$PATH:/home/ubuntu/.composer/vendor/bin\"" >> ~/.profile
     source ~/.profile
 fi
+
+# add project composer to path
+if [[ "$PATH" == ?(*:)"./vendor/bin"?(:*) ]]; then
+    echo "PATH HAS: ./vendor/bin"
+else
+    echo "" >> ~/.profile
+    echo "" >> ~/.profile
+    echo "# COMPSER PROJECT: BIN" >> ~/.profile
+    echo "PATH=\"\$PATH:./vendor/bin\"" >> ~/.profile
+    source ~/.profile
+fi
