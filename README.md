@@ -29,8 +29,24 @@ To able your local laravel application to communicate with the postgres server,
 access the psql command line and then execute the following command:
 
 ```
-postgres=# \password postgres
+\password postgres
 ```
 
 Enter your desired password twice and you should be good to go. We recommend using
 "secret" which is a common laravel default for development environments.
+
+### Postgres + PostGIS
+
+If you are looking to develop geo-spacial centric applications, the PostGIS extension
+for Postgres is a great starting point. To install the extension run the following command:
+
+```
+./laravel-aws-cloud9/postgres/postgis/install.sh
+```
+
+Once the package is installed, you must enable the extension from withing the psql
+command line utility:
+
+```
+CREATE EXTENSION postgis;
+```
