@@ -11,7 +11,7 @@ homestead [CMD]
 
 ## MySQL
 
-To access the local mysql instance simply run the mysql command: 
+To access the local mysql instance simply run the mysql command:
 
 ```
 sudo mysql
@@ -50,3 +50,18 @@ command line utility:
 ```
 CREATE EXTENSION postgis;
 ```
+
+### PHP CodeSniffer
+
+Habing your formatting be automatically cleaned up to a pre-defined standard
+is a major convenience but not necessary if you want to use PHP CodeSniffer in
+AWS Cloud9, here are the steps:
+
+```
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+Then open the [AWS Cloud9 > Preferences] menu and find the section "PHP Support"
+
+1) enable "Format Code on Save"
+2) set "Custom Code Formatter" to ```/home/ubuntu/.composer/vendor/bin/phpcbf "$file"```
