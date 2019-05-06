@@ -20,7 +20,7 @@ You need to have the following:
 5) start developing
 
 
-## Running Services
+## Homestead Utility
 
 Once you install the homestead utility in this bundle, you can start, stop, reload, and
 get the status of all the services with the following command:
@@ -93,7 +93,13 @@ for Postgres is a great starting point. To install the extension run the followi
 ```
 
 Once the package is installed, you must enable the extension from withing the psql
-command line utility:
+command line utility in the context of the database:
+
+```
+psql -U postgres [you-database-name-here]
+```
+
+Then execute this query to enable postgis:
 
 ```
 CREATE EXTENSION postgis;
